@@ -1,0 +1,73 @@
+
+
+/* 2. Painel de Categorias Inferior */
+.panel-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--space-lg);
+}
+
+.panel-card h3 {
+    font-size: var(--fs-h3);
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+
+/* Lista de categorias */
+.categories-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--space-sm);
+    margin-bottom: 10px;
+}
+
+.list-header strong {
+    font-size: var(--fs-body);
+    color: var(--text-main);
+}
+
+/* Linhas dos itens */
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--border-color); /* Borda bem sutil separando itens */
+}
+
+.list-item:last-child {
+    border-bottom: none; /* Tira a borda do último item */
+}
+
+.item-name {
+    color: var(--text-muted);
+    font-size: var(--fs-body);
+}
+
+/* --- RESPONSIVIDADE (Tablets e Celulares) --- */
+@media (max-width: 1024px) {
+    .dashboard-wrapper {
+        grid-template-columns: 1fr; /* Quebra o painel inteiro para 1 coluna */
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* Cards ficam em formato 2x2 */
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* 1 card por linha no celular */
+    }
+    .list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}

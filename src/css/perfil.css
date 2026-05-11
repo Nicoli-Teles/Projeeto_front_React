@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Layout Principal da Página de Perfil
+   ========================================================================== */
+.perfil-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: empilha a sidebar e o conteúdo */
+    gap: var(--space-xl);
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    margin-bottom: 80px; /* Espaço até as categorias/rodapé */
+    align-items: stretch; 
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Coluna da Esquerda: Sidebar do Perfil
+   ========================================================================== */
+.perfil-sidebar {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--space-xl); /* Aumentado para dar mais respiro interno igual ao mockup */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%; 
+}
+
+.perfil-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-lg);
+    color: var(--text-main);
+    font-size: var(--fs-h2); /* Aumentado para bater com o peso da fonte do mockup */
+}
+
+.perfil-avatar {
+    width: 100%;
+    height: 200px; /* Um pouco mais alto para bater a proporção exata */
+    background-color: var(--border-color); 
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: var(--space-xl); /* Espaço bem maior entre a foto e o input "Nome" */
+}
+
+.perfil-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-salvar {
+    align-self: flex-start; 
+    padding: 12px 28px;
+    font-size: var(--fs-body);
+    margin-top: var(--space-md); /* Espaço maior acima do botão */
+}
+
+/* ==========================================================================
+   Coluna da Direita: Lista de Postagens
+   ========================================================================== */
+.perfil-content h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-xl); /* <-- AUMENTADO: Afasta bem o título "Suas Postagens" do primeiro card */
+    color: var(--text-main);
+    font-size: var(--fs-h2);
+}
+
+.postagens-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg); /* <-- AUMENTADO: Cria o distanciamento visível entre um card e outro */
+}
+
+.post-horizontal-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--space-lg) var(--space-xl); /* Padding interno bastante generoso */
+    gap: var(--space-xl); 
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease;
+}
+
+.post-horizontal-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.post-img {
+    background-color: var(--border-color);
+    border-radius: 8px;
+    width: 140px; 
+    height: 100px; /* Altura sutilmente ajustada */
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-status {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+    margin-bottom: 8px; /* Afastado um pouco mais do título */
+}
+
+.post-info h3 {
+    margin: 0;
+    font-size: var(--fs-h3); /* Deixando o título do post maiorzinho, como no design original */
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.post-horizontal-card:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Responsividade: Desktop
+   ========================================================================== */
+@media (min-width: 1024px) {
+    .perfil-layout {
+        grid-template-columns: 500px 1fr; 
+        gap: 50px; /* <-- AUMENTADO: Valeta central maior para separar bem Perfil de Postagens */
+    }
+}

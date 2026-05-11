@@ -1,0 +1,38 @@
+/* ==========================================================================
+   1. SETTINGS / CONFIGURAÇÕES (Variáveis e Escalas)
+   ========================================================================== */
+:root {
+    /* Cores ajustadas para Contraste AA */
+    --primary-teal: #127a73;
+    --primary-hover: #0e5e58;
+    --text-main: #222222;
+    --text-muted: #666666;
+    --border-color: #dddddd;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+    --fundo: #fafafa;
+
+    /* Escala de Espaçamento (Rem) */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Escala Tipográfica */
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+}
+
+/* ==========================================================================
+   2. BASE / RESET (Mobile-First)
+   ========================================================================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    background-color: var(--white);
+}

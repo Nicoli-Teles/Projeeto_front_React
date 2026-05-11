@@ -1,0 +1,35 @@
+/* Inputs Acessíveis */
+.input-field {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: var(--fs-small);
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    border-color: var(--primary-teal);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(18, 122, 115, 0.1);
+}
+
+
+
+/* Busca de categorias */
+
+/* Input de busca interno */
+.panel-search {
+    width: 95%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: var(--fs-small);
+    margin-bottom: 30px;
+    outline: none;
+}
+
+.panel-search:focus {
+    border-color: var(--primary-teal);
+}

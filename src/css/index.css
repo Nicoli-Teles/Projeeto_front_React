@@ -1,0 +1,17 @@
+/* Reseta os padrões do navegador e do Vite */
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: block; /* O Vite às vezes coloca flex aqui, o que pode quebrar o layout */
+}
+
+* {
+  box-sizing: border-box;
+}

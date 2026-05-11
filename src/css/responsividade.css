@@ -1,0 +1,98 @@
+/* Tablets (≥ 768px) */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 20px 50px;
+    }
+    
+    .nav-left {
+        flex-direction: row;      
+        width: auto;
+        align-items: center;
+        gap: 40px; 
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px; 
+    }
+
+    nav a {
+        font-size: var(--fs-body);
+        color: var(--text-main);
+        white-space: nowrap;
+        margin-right: 0; 
+    }
+
+    .nav-right {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end; 
+        gap: 15px; 
+        width: auto;
+    }
+
+    .search-box {
+        width: auto;
+        max-width: 250px; 
+    }
+
+    .button-group {
+        display: flex;
+        gap: var(--space-md);
+    }
+
+    
+
+
+}
+
+
+/* Desktops (≥ 1024px) */
+@media (min-width: 1024px) {
+    .main-container-forms {
+        min-height: 60vh; 
+    }
+    
+
+    .categories {
+            
+            grid-template-columns: repeat(5, 1fr); 
+            padding: var(--space-md);
+            margin:0 auto;
+            box-sizing: border-box;
+        }
+
+    .cat-item {
+        text-align: start;
+ 
+    }
+    .site-footer {
+        text-align: start;
+    }
+
+    .dashboard-wrapper {
+        max-width: 95%; /* Ocupa quase a tela toda */
+    }
+    
+    .dashboard-content {
+        /* Garante que o conteúdo estique para ocupar o 1fr disponível */
+        width: 100%; 
+    }
+    
+    .dashboard-content {
+        /* Garante que o conteúdo estique para ocupar o 1fr disponível */
+        width: 100%; 
+    }
+
+
+
+    
+    
+
+}

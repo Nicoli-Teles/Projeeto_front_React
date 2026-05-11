@@ -1,0 +1,30 @@
+/* ==========================================================================
+   links de cards de navegação inferiores
+   ========================================================================== */
+   /* Categorias */
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: var(--space-md);
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--space-sm)
+}
+
+.cat-item {
+    border: 1px solid var(--border-color);
+    padding: var(--space-md);
+    border-radius: 12px;
+    text-align: center;
+    min-width: 0; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Footer Site */
+.site-footer {
+    text-align: center;
+    padding: var(--space-xl);
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+}

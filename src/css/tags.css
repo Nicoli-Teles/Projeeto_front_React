@@ -1,0 +1,29 @@
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;    /* Permite que elas quebrem de linha no mobile */
+    gap: var(--space-lg);         /* Espaço entre cada etiqueta */
+    padding: var(--space-lg) 0 ;
+    justify-content: flex-start; /* Alinha à esquerda como na foto */
+    width:100% ;
+}
+
+.filter-tag {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--border-color); /* Borda cinza clara da imagem */
+    border-radius: 20px;       /* Cria o efeito de pílula */
+    background-color: var(--white);
+    color: var(--text-main);               /* Cor do texto */
+    font-size: var(--fs-small);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Suaviza o efeito de hover */
+    user-select: none;
+}
+
+/* Efeito de passar o mouse */
+.filter-tag:hover {
+    background-color: #d4d0d09c;
+    border-color: var(--border-color);
+    transform: translateY(-1px);
+}

@@ -1,0 +1,92 @@
+.conteudo-busca{ 
+    width: 100%;
+    display: flex; /* organiza o conteúdo em uma coluna (unidimensional) */
+    flex-direction: column;
+    align-items: start; 
+    padding: var(--space-lg);
+    box-sizing: border-box; /* 
+   Garante que o padding e a borda não aumentem o tamanho total do elemento. 
+   O 'width' definido será o tamanho final real na tela. 
+*/
+    background-color: var(--fundo);
+}
+
+.conjunto-de-cards {
+    display: flex;        
+    flex-direction: column; /* organiza os cards em uma coluna*/
+    gap: var(--space-md);            
+    width: 100%;
+}
+
+.card-busca {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--space-lg);
+    display: flex;        
+    gap: var(--space-md);   /* espaço entre a imagem e o texto */
+    align-items: flex-start; /* mantém a imagem no topo enquanto o texto cresce */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* prepara o efeito de hover */
+    cursor: pointer; /* indica que o card é clicável */
+    flex-direction: column;
+}
+
+/* Quando o card recebe foco via teclado ou mouse*/
+.card-busca:focus-within, 
+.card-busca:focus,
+.card-busca:hover {
+    border-color: var(--text-muted); /* realça a borda */
+    transform: translateY(-4px); /* eleva o card levemente */
+}
+
+
+.card-img {
+    width: 100%;         
+    aspect-ratio: 16 / 5;    
+    background-color: var(--border-color); /* cria um bloco cinza quando não há imagem*/
+    border-radius: 8px;
+    margin: 0;            /* remove margens padrão do figure */
+    overflow: hidden; /* corta a imagem se sair do tamanho definido*/
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Faz a imagem preencher o bloco sem distorcer */
+    display: block;
+    flex-shrink: 0;           /* Impede que a imagem "esmague" se o card diminuir */
+}
+
+
+.card-infos{
+    display: flex;
+    flex-direction: column;    /* Empilha os textos */
+    justify-content: space-between; /* Empurra um item para o topo e outro para a base */
+    min-height: 120px; /* Garante que o card tenha no mínimo o tamanho da imagem */
+    flex: 1;
+    
+    /* Quebra de linha para textos longos */
+    word-break: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.card-busca p{
+    color: var(--text-muted);
+    margin: 0;            /* remove margens padrão do texto */
+    font-size: var(--fs-body);
+}
+
+
+/* Tablets (≥ 768px) */
+@media (min-width: 768px) {
+    .card-busca {
+    flex-direction: row;
+    }
+
+    .card-img {
+    width: 200px;         
+    height: 120px; 
+    }
+
+
+}

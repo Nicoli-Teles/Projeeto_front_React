@@ -1,0 +1,33 @@
+.login-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.login-card h1 {
+    margin: 0 0 var(--space-lg);
+    font-size: var(--fs-h1);
+    font-weight: 700;
+}
+
+/* em baixo do formulario para entrar*/
+.footer-links {
+    margin-top: 20px;
+    font-size: var(--fs-small);
+    color: var(--text-muted); 
+}
+
+.footer-links a {
+    color: var(--text-muted); 
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-teal);
+    text-decoration: underline;
+}

@@ -1,0 +1,111 @@
+/* --- PARA MOBILE CADA INFO É UM CARD --- */
+
+.tabela-grid {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+/* oculta o cabeçalho */
+.grid-header {
+  display: none;
+}
+
+.grid-row {
+  display: flex; 
+  flex-direction: column; 
+  padding: 20px;
+  gap: 12px;
+  border-bottom: 8px solid var(--border-color); /* linha que divide os cards */
+}
+
+.grid-row:last-child {
+  border-bottom: none;
+}
+
+
+/* Cada item dentro do card */
+.grid-item {
+    color: var(--text-muted);
+  display: flex;
+  justify-content: space-between; /* rótulo na esquerda, dado na direita */
+  border-bottom: 1px solid var(--border-color); /* linha que separa cada dado*/
+  padding-bottom: 8px;
+}
+
+/* coloca o rótulo de cada dado a esquerda */
+.grid-item::before {
+  content: attr(data-label); /*pega o rótulo pelo data-label*/
+  font-weight: bold;
+  color: var(--text-muted);
+  font-size: var(--fs-body);
+}
+
+/* estilo específico para a linha de botões no card */
+.grid-item[data-label="Ações"] {
+  justify-content: space-between;  
+  margin-top: 10px;
+  border-bottom: none; /* remove a linha no último item do card */
+  align-items: center;
+
+}
+.status.ativo { color: green; }
+.status.bloqueado { color: rgb(150, 0, 0); }
+
+
+/* --- PARA DESKTOP OU PCS CADA INFO É UMA LINHA DE UMA TABELA --- */
+
+@media (min-width: 768px) {
+
+  .tabela-grid {
+    border: none; /* remove a borda */
+  }
+  
+  /* exibe o cabeçalho */
+  .grid-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 120px; /* Larguras das colunas */
+    background-color: var(--bg-header);
+    font-weight: bold;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .grid-header#revisão {
+  grid-template-columns: 1fr 1fr 1fr 260px;
+  }
+
+  /* transforma cada card em linha de tabela */
+  .grid-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 120px; 
+    flex-direction: row;
+    padding: 16px 16px; /*cima/baixo e direita/esquerda*/
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+  }
+
+  .grid-row#revisão {
+    grid-template-columns: 1fr 1fr 1fr 260px; 
+  }
+
+  /* remove os estilos de "linha de card" */
+  .grid-item {
+    display: block; /* Volta ao fluxo normal */
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* esconde o rótulo (data-label) */
+  .grid-item::before {
+    display: none;
+  }
+
+  .grid-item[data-label="Ações"] {
+    margin-top: 0;
+  }
+
+  .btn-acao {
+    width: auto; /* botão fica do tamanho do texto */
+  }
+}

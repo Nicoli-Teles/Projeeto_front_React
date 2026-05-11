@@ -1,0 +1,79 @@
+/* Botões com estados de interação */
+
+/* Botões do cabeçalho */  
+.btn-outline {
+    border: 1px solid var(--primary-teal);
+    background: transparent;
+    color: var(--primary-teal);
+    padding:12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-teal);
+    color: var(--white);
+    border: none;
+    padding: var(--space-sm);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary:hover { background-color: var(--primary-hover); }
+.btn-primary:focus { outline: 3px solid rgba(18, 122, 115, 0.3); }
+
+.btn-outline-full {
+    border: 1px solid var(--primary-teal);
+    background: transparent;
+    color: var(--primary-teal);
+    padding: var(--space-sm);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-outline-full:hover { background: rgba(18, 122, 115, 0.05); }
+
+
+
+.carregar-mais {
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+    margin: var(--space-sm);
+    padding: var(--space-md);
+    width: 100%;
+}
+
+
+/* Botões Editar/Excluir */
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    background: transparent;
+    color: var(--primary-teal);
+    border: 1px solid var(--primary-hover);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 6px;
+    font-size: var(--fs-body);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+    background: var(--primary-hover);
+    color: var(--white);
+}
