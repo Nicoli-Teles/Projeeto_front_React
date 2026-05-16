@@ -18,7 +18,7 @@ export function Paginas() {
                 <li><Link to="/CriarPost">Criar Post</Link></li>
                 <li><Link to="/EscolhasEditor">Escolhas do Editor</Link></li>
                 <li><Link to="/Usuarios">Usuários</Link></li>
-                <li><Link to="/FilaRevisão">Fila de revisão</Link></li>
+                <li><Link to="/FilaRevisao">Fila de revisão</Link></li>
                 <li><Link to="/FilaComentarios">Fila de comentários</Link></li>
             </ul>
         </aside>
